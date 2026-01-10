@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Servers | Criação de Servidores Discord</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #9f7aea;
+    }
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .tab {
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background: #9f7aea;
+    }
+    .content {
+      display: none;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .content.active {
+      display: block;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(0,0,0,0.4);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      color: #63b3ed;
+      margin-top: 0;
+    }
+    .price {
+      font-size: 1.8em;
+      color: #68d391;
+      margin: 10px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      background: rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nexus Servers</h1>
+  <p>Criação profissional de servidores Discord<br>Seu servidor, do seu jeito!</p>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="openTab('basico')">Servidores Básicos</div>
+  <div class="tab" onclick="openTab('avancado')">Servidores Avançados</div>
+  <div class="tab" onclick="openTab('comunidade')">Comunidades</div>
+  <div class="tab" onclick="openTab('empresarial')">Empresariais</div>
+  <div class="tab" onclick="openTab('extras')">Extras</div>
+</div>
+
+<!-- BÁSICO -->
+<div id="basico" class="content active">
+  <div class="cards">
+    <div class="card">
+      <h3>Plano Básico</h3>
+      <div class="price">R$ 25,00</div>
+      <ul>
+        <li>Canais essenciais</li>
+        <li>Cargos básicos</li>
+        <li>Regras e avisos</li>
+        <li>Entrega até 24h</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- AVANÇADO -->
+<div id="avancado" class="content">
+  <div class="cards">
+    <div class="card">
+      <h3>Plano Intermediário</h3>
+      <div class="price">R$ 50,00</div>
+      <ul>
+        <li>Sistema de tickets</li>
+        <li>Bots de moderação</li>
+        <li>Cargos por reação</li>
+        <li>Entrega até 48h</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Plano Premium</h3>
+      <div class="price">R$ 90,00</div>
+      <ul>
+        <li>Sistema de vendas</li>
+        <li>Logs completos</li>
+        <li>Bots personalizados</li>
+        <li>Entrega até 72h</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- COMUNIDADE -->
+<div id="comunidade" class="content">
+  <div class="cards">
+    <div class="card">
+      <h3>Servidor de Comunidade</h3>
+      <div class="price">R$ 70,00</div>
+      <ul>
+        <li>Eventos</li>
+        <li>Sistema de níveis</li>
+        <li>Cargos automáticos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- EMPRESARIAL -->
+<div id="empresarial" class="content">
+  <div class="cards">
+    <div class="card">
+      <h3>Servidor Empresarial</h3>
+      <div class="price">R$ 120,00</div>
+      <ul>
+        <li>Canais privados</li>
+        <li>Permissões avançadas</li>
+        <li>Atendimento profissional</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- EXTRAS -->
+<div id="extras" class="content">
+  <div class="cards">
+    <div class="card">
+      <h3>Bot Personalizado</h3>
+      <div class="price">R$ 20,00</div>
+    </div>
+    <div class="card">
+      <h3>Sistema de Loja</h3>
+      <div class="price">R$ 15,00</div>
+    </div>
+    <div class="card">
+      <h3>Whitelist / Verificação</h3>
+      <div class="price">R$ 15,00</div>
+    </div>
+    <div class="card">
+      <h3>Entrega Expressa</h3>
+      <div class="price">R$ 10,00</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Pagamento via PIX ou Ticket no Discord<br>Nexus Servers © 2026</p>
+</footer>
+
+<script>
+  function openTab(tabId) {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
